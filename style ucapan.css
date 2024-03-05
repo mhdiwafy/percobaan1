@@ -1,0 +1,247 @@
+/* Set the colour and the position of the background and the elements */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #91e5f6;
+}
+
+.container {
+  position: relative;
+}
+.movement {
+  position: relative;
+  top: 25px;
+  cursor: pointer;
+  animation: up 5s linear infinite;
+}
+
+/* Style the envelope and the card */
+.audio{
+  top: 600px;
+}
+
+
+.foto{
+  position: absolute;
+  border-radius: 4px;
+  width: 16px;
+  height: 35px;
+  top: 600px;
+  left: 150px;
+  max-width: 25%;
+  max-height: 25%;
+  z-index:1
+ }
+
+.envelope {
+  position: relative;
+  width: 499px;
+  height: 375px;
+  background-color: #386fa4;
+  z-index: 1;
+  top:100px ;
+  
+}
+
+.envelopeclose {
+  background-color: #386fa4;
+  content: "";
+  position: absolute;
+  width: 355px;
+  height: 355px;
+  transform: rotate(45deg);
+  top: -75px;
+  left: 71.5px;
+  border-radius: 30px 2px 2px 5px;
+
+  z-index: 2;
+}
+
+
+
+.cardtitle {
+  position: absolute;
+  background-color: #eae2b7;
+  width: 240px;
+  height: 45px;
+  top: 10px;
+  left: 130px;
+  border-radius: 8px 8px 8px 8px;
+  box-shadow: -5px -5px 30px rgba(0, 0, 0, 0.3);
+  z-index: 3;
+}
+
+.cardblur {
+  position: absolute;
+  background-color:#59a5d8;
+  opacity:0.9 ;
+  width: 420px;
+  height: 180px;
+  top: 115px;
+  left: 40px;
+  box-shadow: -1px -1px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 10px 10px 10px 10px;
+  filter: blur(20px);
+  z-index: 5
+}
+
+.heartblur {
+  position: absolute;
+  background-color:#942d2d;
+  opacity:0.6 ;
+  width: 280px;
+  height: 80px;
+  top: 320px;
+  left: 110px;
+  box-shadow: -1px -1px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 10px 10px 10px 10px;
+  filter: blur(25px);
+  z-index: 6
+}
+
+.card {
+  position: absolute;
+  background-color: #efe8c1;
+  width: 470px;
+  height: 310px;
+  top: 140px;
+  left: 15px;
+  box-shadow: -5px -5px 15px rgba(0, 0, 0, 0.4);
+  border-radius: 10px 10px 10px 10px;
+  z-index: 4;
+
+}
+
+.card:before {
+  content: "";
+  position: absolute;
+  border: 3px solid #003049;
+  border-style: dotted;
+  width: 445px;
+  height: 285px;
+  left: 10px;
+  top: 10px;
+  border-radius: 4px 4px 4px 4px;
+}
+
+.texttitle {
+  position: absolute;
+  font-family:'Brush Script MT',cursive ;
+  font-size: 60px;
+  text-align: left;
+  line-height: 0;
+  top: 30px;
+  left: 130px;
+  color: #a01078;
+  z-index: 4;
+}
+
+.text {
+  position: absolute;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  text-align: center;
+  line-height: 23px;
+  top: 16.5px;
+  left: 17px;
+  right: 13px;
+}
+
+.envelopeup {
+  position: absolute;
+  border-right: 230px solid #d32516;
+  border-top: 249px solid transparent;
+  border-bottom: 249px solid transparent;
+  left: 134px;
+  top: -133px;
+  width: 0;
+  height: 0;
+  z-index: 9;
+  transform: rotate(270deg);
+}
+
+.front {
+  position: absolute;
+  border-right: 390px solid #2089df;
+  border-top: 290px solid transparent;
+  border-bottom: 80px solid transparent;
+  left: 110px;
+  top: 105px;
+  width: 0;
+  height: 0;
+  z-index: 10;
+}
+
+.front:before {
+  position: absolute;
+  content: "";
+  border-left: 500px solid #269dff;
+  border-top: 375px solid transparent;
+  left: -110px;
+  top: -294px;
+  width: 0;
+  height: 0;
+  z-index: 10
+}
+
+.heart {
+  background-color: #e11b1b;
+  display: inline-block;
+  height: 45px;
+  margin: 0 14px;
+  position: relative;
+  top: -285px;
+  left: 214px;
+  transform: rotate(-45deg);
+  width: 45px;
+  z-index: 8;
+}
+
+.heart:before,
+.heart:after {
+  content: "";
+  background-color: #e11b1b;
+  border-radius: 50%;
+  height: 45px;
+  position: absolute;
+  width: 45px;
+}
+
+.heart:before {
+  top: -23px;
+  left: 0;
+}
+
+.heart:after {
+  left: 22px;
+  top: 0;
+}
+
+/* Add the shadow */
+.shadow {
+  position :absolute
+}
+
+/* To move the envelope up and down */
+@keyframes up {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-20px);
+  }
+}
+
+/* to scale the shadow */
+@keyframes scale {
+  0%,
+  100% {
+    transform: scaleX(1);
+  }
+  25% {
+    transform: scaleX(0.85);
+  }
+}
